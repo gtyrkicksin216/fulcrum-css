@@ -1,0 +1,17 @@
+{
+  "name": "gofer-css",
+  "version": "0.1.0",
+  "description": "A CSS utility set used to easily style UI components by adding some simple markup",
+  "main": "gofer.min.css",
+  "scripts": {
+    "test": "test",
+    "dev:build": "node-sass scss/gofer.scss dist/gofer.min.css --output-style compressed && npm pack"
+  },
+  "keywords": [
+    "CSS",
+    "gofer",
+    "add-on"
+  ],
+  "author": "Ryan Wood",
+  "license": "MIT"
+}
