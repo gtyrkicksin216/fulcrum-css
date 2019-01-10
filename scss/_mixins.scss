@@ -139,6 +139,20 @@
   }
 }
 
+/*
+  * This will create font sizes 8-22 even numbers only and class names
+  * as such
+*/
+@mixin fontSizes($start: 8, $end: 22) {
+  @for $i from $start through $end {
+    @if ($i % 2 == 0) {
+      .u-font-size-#{$i} {
+        font-size: rems($i);
+      }
+    }
+  }
+}
+
   // Movement Classes
   /*
     This will allow you to move an element in one direction without

@@ -63,3 +63,5 @@
 .u-full-width {
   @include fullWidth();
 }
+
+@include fontSizes;
