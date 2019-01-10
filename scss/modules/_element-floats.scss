@@ -1,0 +1,14 @@
+// For floating elements
+@mixin floatElement {
+  $elementFloat: (
+  right,
+  left,
+  );
+  @each $alignment in $elementFloat {
+    .u-#{$alignment} {
+      float: $alignment;
+    }
+  }
+}
+
+@include floatElement;

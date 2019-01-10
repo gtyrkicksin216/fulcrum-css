@@ -1,0 +1,21 @@
+@mixin bp($point) {
+  $tablet: '(max-width: 992px)';
+  $mobile: '(max-width: 774px)';
+  @if type-of($point) == 'string' {
+    @if $point == tablet {
+      @media #{$tablet} {
+        @content;
+      }
+    } @else if $point == mobile {
+      @media #{$mobile} {
+        @content;
+      }
+    } @else {
+      @error 'The value provided does not match an option. Options are: "mobile" and "tablet". If you want to use a custom breakpoint size use a number [ ie. @include bp(1200px) ]';
+    }
+  } @else if type-of($point) == 'number' {
+    @media (max-width: #{$point}) {
+      @content;
+    }
+  }
+}
