@@ -13,5 +13,8 @@
     "add-on"
   ],
   "author": "Ryan Wood",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
 }
