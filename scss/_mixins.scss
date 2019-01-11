@@ -8,6 +8,7 @@
 }
 @mixin disabledInput {
   color: #c8cdd0;
+  pointer-events: none;
 }
 @mixin fullWidth() {
   width: 100%;
@@ -22,136 +23,8 @@
 //   }
 // }
 
-// Box shadow calculation values 1-10
-@mixin amtElevation($blur: null, $spread: 0, $color: #c8cdd0) {
-  @for $i from 1 through 10 {
-    $xOffset: $i;
-    $yOffset: $i;
-    $blur: $i + 3;
-    .u-amt-elevation-#{$i} {
-      box-shadow: #{$xOffset}px #{$yOffset}px #{$blur}px #{$spread}px #{$color};
-    }
-  }
-}
 
-/*
- * Creates spacers from 5-50 incremented by 5
- * Custom classes can be used by using the syntax:
- * @include spacers($other: #); ***:`#` is a custom number:***
-*/
-@mixin spacers($start: 1, $end: 10, $multiplier: 5, $other: null) {
-  @if ($other == null or $other == '') {
-    @for $i from $start through $end {
-      $value: $i * $multiplier;
-      .u-spacer-#{$value} {
-        clear: both;
-        height: #{$value}px;
-      }
-    }
-  } @else {
-    .u-spacer-#{$other} {
-      clear: both;
-      height: #{$other}px;
-    }
-  }
-}
 
-// Alignment maps
-
-// For floating elements
-@mixin floatElement {
-  $elementFloat: (
-  right,
-  left,
-  );
-  @each $alignment in $elementFloat {
-    .u-#{$alignment} {
-      float: $alignment;
-    }
-  }
-}
-
-// For aligning text
-@mixin textAlignment {
-  $textAlign: (
-    right,
-    left,
-    center,
-  );
-  @each $alignment in $textAlign {
-    .u-text-#{$alignment} {
-      text-align: $alignment;
-    }
-  }
-}
-
-// Margin classes
-/*
-  * This will create a `margin: 0 !important;` rule as well
-  * as a `margin-[top|right|bottom|left]: 0;`
-*/
-@mixin margins($start: 0, $end: 10, $multiplier: 5) {
-  $positions: (
-    top,
-    bottom,
-    left,
-    right,
-  );
-  @if ($start == 0) {
-    .u-margin-0 {
-      margin: 0 !important;
-    }
-  }
-  @each $position in $positions {
-    @for $i from $start through $end {
-      $value: $i * $multiplier;
-      .u-margin-#{$position}-#{$value} {
-        margin-#{$position}: #{$value}px;
-      }
-    }
-  }
-}
-
-// Padding Classes
-/*
-  * This will create paddings 5-50 as
-  * `padding-[top|right|bottom|left]: #;`
-*/
-@mixin padding($start: 0, $end: 10, $multiplier: 5) {
-  $positions: (
-    top,
-    bottom,
-    left,
-    right,
-  );
-  @if ($start == 0) {
-    .u-padding-0 {
-      padding: 0 !important;
-    }
-  }
-  @each $position in $positions {
-    @for $i from $start through $end {
-      $value: $i * $multiplier;
-      .u-padding-#{$position}-#{$value} {
-        padding-#{$position}: #{$value}px;
-      }
-    }
-  }
-}
-
-/*
-  * This will create font sizes 8-22 even numbers only and class names
-  * as such
-*/
-@mixin fontSizes($start: 8, $end: 22) {
-  @for $i from $start through $end {
-    @if ($i % 2 == 0) {
-      .u-font-size-#{$i} {
-        font-size: rems($i);
-      }
-    }
-  }
-}
 
   // Movement Classes
   /*
@@ -179,62 +52,3 @@
   //     }
   //   }
   // }
-
-/*
-  * This will create font weights 200-900 as a utility class
-  * as a `u-font-[number]
-*/
-
-@mixin fontWeight {
-  $weights: (
-    extra-light: 200,
-    light: 300,
-    regular: 400,
-    semi-bold: 600,
-    bold: 700,
-    black: 900,
-  );
-  @each $value, $weight in $weights {
-    .u-font-#{$value} {
-      font-weight: $weight;
-    }
-  }
-}
-
-/*
-  * For IE 10 & 11
-  */
-  @mixin ie10plus {
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      @content;
-    }
-  }
-
-@mixin bp($point) {
-  $tablet: '(max-width: 992px)';
-  $mobile: '(max-width: 774px)';
-  @if type-of($point) == 'string' {
-    @if $point == tablet {
-      @media #{$tablet} {
-        @content;
-      }
-    } @else if $point == mobile {
-      @media #{$mobile} {
-        @content;
-      }
-    } @else {
-      @error 'The value provided does not match an option. Options are: "mobile" and "tablet". If you want to use a custom breakpoint size use a number [ ie. @include bp(1200px) ]';
-    }
-  } @else if type-of($point) == 'number' {
-    @media (max-width: #{$point}) {
-      @content;
-    }
-  }
-}
-
-  /*
-  * To calculate ideal size of rems even if root font size is not set
-  */
-  @function rems($number) {
-    @return #{16px * $number};
-  }
