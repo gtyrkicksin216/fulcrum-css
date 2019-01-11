@@ -1,0 +1,32 @@
+@import './rem-calcuation';
+
+@mixin heading($heading, $fontSize) {
+  .c-heading-h#{$heading} {
+    font-size: rems($fontSize);
+  }
+}
+
+@mixin headingSize {
+  $headings: (
+    1: 1.5,
+    2: 1.375,
+    3: 1.375,
+    4: 1.125,
+    5: 1,
+    p: 0.875,
+  );
+  @each $heading, $fontSize in $headings {
+    @if $heading == 2 {
+      @include heading($heading, $fontSize);
+    } @else if $heading == p {
+      p,
+      .c-site-content__text {
+        font-size: rems($fontSize);
+      }
+    } @else {
+      @include heading($heading, $fontSize);
+    }
+  }
+}
+
+@include headingSize;
