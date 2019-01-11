@@ -1,0 +1,21 @@
+// for use with flex items only
+@mixin alignSelf {
+  $alignments: (
+    start,
+    end,
+    center,
+  );
+  @each $alignment in $alignments {
+    @if $alignment == start or $alignment == end {
+      .u-align-self-#{$alignment} {
+        align-self: flex-#{$alignment};
+      }
+    } @else {
+      .u-align-self-#{$alignment} {
+        align-self: $alignment;
+      }
+    }
+  }
+}
+
+@include alignSelf;
