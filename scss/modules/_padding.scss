@@ -12,14 +12,18 @@
   );
   @if ($start == 0) {
     .u-padding-0 {
-      padding: 0 !important;
+      &#{&} {
+        padding: 0 !important;
+      }
     }
   }
   @each $position in $positions {
     @for $i from $start through $end {
       $value: $i * $multiplier;
       .u-padding-#{$position}-#{$value} {
-        padding-#{$position}: #{$value}px;
+        &#{&} {
+          padding-#{$position}: #{$value}px;
+        }
       }
     }
   }

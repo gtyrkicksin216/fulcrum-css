@@ -8,11 +8,15 @@
   @each $alignment in $alignments {
     @if $alignment == start or $alignment == end {
       .u-align-self-#{$alignment} {
-        align-self: flex-#{$alignment};
+        &#{&} {
+          align-self: flex-#{$alignment};
+        }
       }
     } @else {
       .u-align-self-#{$alignment} {
-        align-self: $alignment;
+        &#{&} {
+          align-self: $alignment;
+        }
       }
     }
   }

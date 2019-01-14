@@ -14,7 +14,9 @@
   );
   @each $value, $weight in $weights {
     .u-font-#{$value} {
-      font-weight: $weight;
+      &#{&} {
+        font-weight: $weight;
+      }
     }
   }
 }

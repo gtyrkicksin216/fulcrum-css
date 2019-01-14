@@ -6,7 +6,9 @@
   @for $i from $start through $end {
     @if ($i % 2 == 0) {
       .u-font-size-#{$i} {
-        font-size: #{$i}px;
+        &#{&} {
+          font-size: #{$i}px;
+        }
       }
     }
   }

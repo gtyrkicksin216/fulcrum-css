@@ -52,3 +52,17 @@
   //     }
   //   }
   // }
+
+//   %one { color: blue; }
+
+//   @mixin specificty($level: 1) {
+//     $selectorDupe: &#{&};
+//     $levels: $level;
+//     #{$selectorDupe} {
+//       @extend %one;
+//     }
+//   }
+
+// .test-class {
+//   @include specificty;
+// }

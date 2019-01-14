@@ -8,14 +8,18 @@
     @for $i from $start through $end {
       $value: $i * $multiplier;
       .u-spacer-#{$value} {
-        clear: both;
-        height: #{$value}px;
+        &#{&} {
+          clear: both;
+          height: #{$value}px;
+        }
       }
     }
   } @else {
     .u-spacer-#{$other} {
-      clear: both;
-      height: #{$other}px;
+      &#{&} {
+        clear: both;
+        height: #{$other}px;
+      }
     }
   }
 }

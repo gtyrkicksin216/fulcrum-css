@@ -7,7 +7,9 @@
   );
   @each $alignment in $textAlign {
     .u-text-#{$alignment} {
-      text-align: $alignment;
+      &#{&} {
+        text-align: $alignment;
+      }
     }
   }
 }

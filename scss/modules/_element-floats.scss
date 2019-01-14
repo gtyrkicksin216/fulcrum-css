@@ -6,7 +6,9 @@
   );
   @each $alignment in $elementFloat {
     .u-#{$alignment} {
-      float: $alignment;
+      &#{&} {
+        float: $alignment;
+      }
     }
   }
 }

@@ -5,7 +5,9 @@
     $yOffset: $i;
     $blur: $i + 3;
     .u-amt-elevation-#{$i} {
-      box-shadow: #{$xOffset}px #{$yOffset}px #{$blur}px #{$spread}px #{$color};
+      &#{&} {
+        box-shadow: #{$xOffset}px #{$yOffset}px #{$blur}px #{$spread}px #{$color};
+      }
     }
   }
 }
