@@ -2,40 +2,77 @@
 
 FulcrumCSS is a CSS utility library that allows you to *leverage* commonly used CSS to apply simple styles and position to elements by simply adding markup. By using FulcrumCSS you can focus on writing verbose, clean markup, while reducing CSS redundancies caused by commonly used styles. FulcrumCSS uses single class rules that only ever carry a specificity of 10, which makes this ideal to use alongside BEM methodology to increase development efficiency and decrease development time. FulcrumCSS is lighweight and modular. You can either import the whole library, or you can simply import what you need. FulcrumCSS leverages the power of SCSS mixins, which also allows for customization of certain utility classes.
 
-## Edit a file
+## Installing Fulcrum
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+To install Fulcrum, all you need to do is
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+```cmd
+npm i http://amtcdn.amtrustgroup.com/CDN/AFSI/npm/fulcrum-css-[current-version].tgz --save
+```
 
----
+## Using Fulcrum
 
-## Create a file
+In a project without Fulcrum, say you have some elements that has some display styles (color, background, etc) tied to a class name
 
-Next, you’ll add a new file to this repository.
+```html
+<div class="item">
+  <div class="item__element">
+    ...
+  </div>
+</div>
+<div class="item">
+  <div class="item__element">
+    ...
+  </div>
+</div>
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+```
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+```scss
+.item {
+  &__element {
+    color: blue;
+    background: orange;
+  }
+}
+```
 
----
+Now you want to add some margin to *one* of the elements to put some space between them. You can either add another class, write a disclusion rule with `:not()`, or an inclusion rule with `:first-child | :last-child`.
 
-## Clone a repository
+**-OR-**
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+You could use Fulcrum to leverage commonly used CSS to do this task for you! Fulcrum keeps CSS bloat to a minimum, while helping make your markup more readable and verbose. When you look at an element with Fulcrum classes, you will be able to tell what exactly is being applied from the Fulcrum Library. From the example above, lets add 25px of bottom margin to the first element:
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+```html
+<div class="item u-margin-bottom-25"> <!-- Notice the Fulcrum class added here -->
+  <div class="item__element">
+    ...
+  </div>
+</div>
+<div class="item">
+  <div class="item__element">
+    ...
+  </div>
+</div>
+```
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+With the addition of the Fulcrum Utility class, it will add the desired margin-bottom with a specificity of 20. This ensures that Fulcrum is able to add the CSS you need without using `!important` flags\* for every rule. Fulcrum also uses the `u-` namespace to avoid collision with rules that may be in place when dealing with legacy sites and/or applications.
+
+<small>* <code>!important</code> flags are used for certain margin & padding classes. Please see the docs for more information</small>
+
+This example is just a small portion of what you can do with Fulcrum. With Fulcrum, you have one centralized location for all of your positioning CSS which means you don't have to add class names or duplicate CSS just to bump an element around the page. Fulcrum also contains utility classes for commonly used display rules. For example, say you wanted those parent elements to have a little bit of box shadow to provide some depth:
+
+```html
+<div class="item u-margin-bottom-25 u-elevation-1">
+  <div class="item__element">
+    ...
+  </div>
+</div>
+<div class="item u-elevation-1">
+  <div class="item__element">
+    ...
+  </div>
+</div>
+```
+
+You can see in the above example, that adding a slight box shadow is as easy as adding a class name to your parent element. Now at a glance, your markup tells you that they both have some box shadow, and the first item has some bottom margin. Fulcrum does all of this while keeping the specificity of the selectors at 20, and reusing code from the global scope to keep your CSS DRY and reduce loading cost.
