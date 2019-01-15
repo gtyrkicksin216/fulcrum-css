@@ -1,0 +1,33 @@
+// Margin classes
+/*
+  * This will create a `margin: 0 !important;` rule as well
+  * as a `margin-[top|right|bottom|left]: 0;`
+*/
+@mixin margins($start: 0, $end: 10, $multiplier: 5) {
+  $positions: (
+    top,
+    bottom,
+    left,
+    right,
+  );
+  @if ($start == 0) {
+    .u-margin-0 {
+      &#{&} {
+        margin: 0 !important;
+      }
+    }
+  }
+  @each $position in $positions {
+    @for $i from $start through $end {
+      $value: $i * $multiplier;
+      .u-margin-#{$position}-#{$value} {
+        &#{&} {
+          margin-#{$position}: #{$value}px;
+        }
+      }
+    }
+  }
+}
+
+
+@include margins;

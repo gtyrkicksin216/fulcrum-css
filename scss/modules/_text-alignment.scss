@@ -1,0 +1,18 @@
+// For aligning text
+@mixin textAlignment {
+  $textAlign: (
+    right,
+    left,
+    center,
+  );
+  @each $alignment in $textAlign {
+    .u-text-#{$alignment} {
+      &#{&} {
+        text-align: $alignment;
+      }
+    }
+  }
+}
+
+
+@include textAlignment;

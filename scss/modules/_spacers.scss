@@ -1,0 +1,28 @@
+/*
+ * Creates spacers from 5-50 incremented by 5
+ * Custom classes can be used by using the syntax:
+ * @include spacers($other: #); ***:`#` is a custom number:***
+*/
+@mixin spacers($start: 1, $end: 10, $multiplier: 5, $other: null) {
+  @if ($other == null or $other == '') {
+    @for $i from $start through $end {
+      $value: $i * $multiplier;
+      .u-spacer-#{$value} {
+        &#{&} {
+          clear: both;
+          height: #{$value}px;
+        }
+      }
+    }
+  } @else {
+    .u-spacer-#{$other} {
+      &#{&} {
+        clear: both;
+        height: #{$other}px;
+      }
+    }
+  }
+}
+
+
+@include spacers;

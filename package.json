@@ -5,6 +5,7 @@
   "main": "gofer.min.css",
   "scripts": {
     "test": "test",
+    "dev:watch": "node-sass -w -r scss/gofer.scss scss/dispose.css",
     "dev:build": "node-sass scss/gofer.scss dist/gofer.min.css --output-style compressed && npm pack"
   },
   "keywords": [
@@ -13,5 +14,8 @@
     "add-on"
   ],
   "author": "Ryan Wood",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
 }

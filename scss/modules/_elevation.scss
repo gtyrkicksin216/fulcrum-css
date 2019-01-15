@@ -1,0 +1,16 @@
+// Box shadow calculation values 1-10
+@mixin amtElevation($blur: null, $spread: 0, $color: #c8cdd0) {
+  @for $i from 1 through 10 {
+    $xOffset: $i;
+    $yOffset: $i;
+    $blur: $i + 3;
+    .u-amt-elevation-#{$i} {
+      &#{&} {
+        box-shadow: #{$xOffset}px #{$yOffset}px #{$blur}px #{$spread}px #{$color};
+      }
+    }
+  }
+}
+
+
+@include amtElevation;

@@ -1,0 +1,33 @@
+// Padding Classes
+/*
+  * This will create paddings 5-50 as
+  * `padding-[top|right|bottom|left]: #;`
+*/
+@mixin padding($start: 0, $end: 10, $multiplier: 5) {
+  $positions: (
+    top,
+    bottom,
+    left,
+    right,
+  );
+  @if ($start == 0) {
+    .u-padding-0 {
+      &#{&} {
+        padding: 0 !important;
+      }
+    }
+  }
+  @each $position in $positions {
+    @for $i from $start through $end {
+      $value: $i * $multiplier;
+      .u-padding-#{$position}-#{$value} {
+        &#{&} {
+          padding-#{$position}: #{$value}px;
+        }
+      }
+    }
+  }
+}
+
+
+@include padding;

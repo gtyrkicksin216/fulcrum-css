@@ -1,0 +1,24 @@
+/*
+  * This will create font weights 200-900 as a utility class
+  * as a `u-font-[number]
+*/
+
+@mixin fontWeight {
+  $weights: (
+    extra-light: 200,
+    light: 300,
+    regular: 400,
+    semi-bold: 600,
+    bold: 700,
+    black: 900,
+  );
+  @each $value, $weight in $weights {
+    .u-font-#{$value} {
+      &#{&} {
+        font-weight: $weight;
+      }
+    }
+  }
+}
+
+@include fontWeight;

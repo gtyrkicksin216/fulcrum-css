@@ -1,0 +1,6 @@
+/*
+  * To calculate ideal size of rems even if root font size is not set
+*/
+@function rems($number) {
+  @return #{16px * $number};
+}
