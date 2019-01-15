@@ -1,6 +1,6 @@
 # 0.2.0 (2019-01-14)
 ### Features
-- Increased specificity weight of all utility selectors to 20 to override predeclared rules without adding `!important` tags.
+- Increased specificity weight of all utility selectors to 20 to override predeclared rules without adding `!important` tags (#100644), closes #6
 
 ### Bug Fixes
 
