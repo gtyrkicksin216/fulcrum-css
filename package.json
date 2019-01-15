@@ -1,12 +1,12 @@
 {
-  "name": "gofer-css",
-  "version": "0.1.0",
+  "name": "fulcrum-css",
+  "version": "0.2.0",
   "description": "A CSS utility set used to easily style UI components by adding some simple markup",
-  "main": "gofer.min.css",
+  "main": "fulcrum.min.css",
   "scripts": {
     "test": "test",
-    "dev:watch": "node-sass -w -r scss/gofer.scss scss/dispose.css",
-    "dev:build": "node-sass scss/gofer.scss dist/gofer.min.css --output-style compressed && npm pack"
+    "dev:watch": "node-sass -w -r scss/fulcrum.scss scss/dispose.css",
+    "dev:build": "node-sass scss/fulcrum.scss dist/fulcrum.min.css --output-style compressed && npm pack"
   },
   "keywords": [
     "CSS",
