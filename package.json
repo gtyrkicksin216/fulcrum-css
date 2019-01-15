@@ -6,12 +6,16 @@
   "scripts": {
     "test": "test",
     "dev:watch": "node-sass -w -r scss/fulcrum.scss scss/dispose.css",
-    "dev:build": "node-sass scss/fulcrum.scss dist/fulcrum.min.css --output-style compressed && npm pack"
+    "dev:build": "rm -rf dist/ && rm -rf *.tgz && node-sass scss/fulcrum.scss dist/fulcrum.min.css --output-style compressed && npm pack"
   },
   "keywords": [
     "CSS",
-    "gofer",
-    "add-on"
+    "fulcrum",
+    "add-on",
+    "fulcrumCSS",
+    "utilities",
+    "SCSS",
+    "Sass"
   ],
   "author": "Ryan Wood",
   "license": "MIT",
