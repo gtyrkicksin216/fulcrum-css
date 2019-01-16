@@ -11,5 +11,5 @@ pipelines:
         caches:
           - node
         script: # Modify the commands below to build your repository.
-          - npm install
+          - npm i && npm i -g node-sass
           - node-sass scss/fulcrum.scss dist/build-test.css
