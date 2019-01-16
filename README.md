@@ -6,9 +6,8 @@ FulcrumCSS is a CSS utility library that allows you to *leverage* commonly used 
 
 To install Fulcrum, all you need to do is
 
-```cmd
-npm i http://amtcdn.amtrustgroup.com/CDN/AFSI/npm/fulcrum-css-[current-version].tgz --save
-```
+
+
 
 ## Using Fulcrum
 
