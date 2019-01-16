@@ -1,0 +1,10 @@
+# files
+CHANGELOG.md
+npm-shrinkwrap.json
+*/*.tgz
+
+# build tools
+*.yml
+
+# editor settings
+.editorconfig

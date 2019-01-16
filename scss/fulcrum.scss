@@ -1,6 +1,3 @@
-// @import './mixins',
-//         './includes';
-
 @import './modules/breakpoints',
         './modules/browser-compat',
         './modules/element-floats',
@@ -11,10 +8,8 @@
         './modules/rem-calcuation',
         './modules/spacers',
         './modules/text-alignment',
+        './modules/full-width',
+        './modules/heading-size',
+        './modules/align-self',
+        './modules/flex-align-items',
         './modules/font-size';
-
-@import './modules/heading-size';
-@import './modules/align-self';
-@import './modules/flex-align-items';
-
-@import './mixins';
