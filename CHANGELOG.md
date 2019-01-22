@@ -1,6 +1,6 @@
 # 0.1.0-rc3 (2019-01-22)
 ### Features
-- Added `fontColor` and `textTransform` mixins
+- Added `fontColor` and `textTransform` mixins (#5) (1450a7b) closes #1 #4 #2
 - `fontColor` usage:
   - **Syntax:** `u-font-color-<primary|accent|warn|normal>`
     ```html
