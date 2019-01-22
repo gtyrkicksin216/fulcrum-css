@@ -1,6 +1,6 @@
 # FulcrumCSS
 
-FulcrumCSS is a CSS utility library that allows you to *leverage* commonly used CSS to apply simple styles and position to elements by simply adding markup. By using FulcrumCSS you can focus on writing verbose, clean markup, while reducing CSS redundancies caused by commonly used styles. FulcrumCSS uses single class rules that only ever carry a specificity of 10, which makes this ideal to use alongside BEM methodology to increase development efficiency and decrease development time. FulcrumCSS is lighweight and modular. You can either import the whole library, or you can simply import what you need. FulcrumCSS leverages the power of SCSS mixins, which also allows for customization of certain utility classes.
+FulcrumCSS is a CSS utility library that allows you to *leverage* commonly used CSS to apply simple styles and position to elements by simply adding markup. By using FulcrumCSS you can focus on writing verbose, clean markup, while reducing CSS redundancies caused by commonly used styles. FulcrumCSS uses single class rules that only ever carry a specificity of 20, which makes this ideal to use alongside BEM methodology to increase development efficiency and decrease development time. FulcrumCSS is lighweight and modular. You can either import the whole library, or you can simply import what you need. FulcrumCSS leverages the power of SCSS mixins, which also allows for customization of certain utility classes.
 
 ## Installing Fulcrum
 
