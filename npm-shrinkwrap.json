@@ -1,6 +1,6 @@
 {
-  "name": "gofer-css",
-  "version": "0.1.0",
+  "name": "fulcrum-css",
+  "version": "0.1.0-rc3",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {

@@ -1,0 +1,28 @@
+// @mixin fulcrumConfig {
+  
+// }
+
+// $multiplier: '#{&#{&}}';
+
+// $config: (
+//   speicificity: 2,
+// );
+
+// .test {
+//   #{$multiplier + $multiplier} {
+//     color: blue;
+//   }
+//   @debug ($multiplier) + map-get($config, speicificity);
+// }
+
+$replicator: '&#{&}';
+
+@mixin specificity($level) {
+  .selector {
+    #{$replicator} {
+      color: blue;
+    }
+  }
+}
+
+@include specificity(1)
