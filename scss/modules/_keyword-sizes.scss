@@ -1,0 +1,46 @@
+$keywords: (
+  small: 15,
+  medium: 30,
+  large: 45,
+  x-large: 60,
+);
+
+$positions: (
+  top,
+  bottom,
+  right,
+  left,
+);
+
+$utilTypes: (
+  padding,
+  margin,
+  spacer,
+);
+
+@mixin keywordSizes {
+  @each $utilType in $utilTypes {
+    @each $keyword, $size in $keywords {
+      @if ($utilType == 'spacer') {
+        .u-spacer-#{$keyword} {
+          &#{&} {
+            clear: both;
+            height: #{$size}px;
+          }
+        }
+      } @else {
+        @each $position in $positions {
+          .u-#{$utilType}-#{$position}-#{$keyword} {
+            &#{&} {
+              #{$utilType}-#{$position}: #{$size}px;
+            }
+          }
+        }
+      }
+    }
+  }
+};
+
+
+
+@include keywordSizes();
