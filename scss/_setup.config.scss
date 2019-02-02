@@ -1,28 +1,26 @@
-// @mixin fulcrumConfig {
-  
-// }
 
-// $multiplier: '#{&#{&}}';
-
-// $config: (
-//   speicificity: 2,
-// );
-
-// .test {
-//   #{$multiplier + $multiplier} {
-//     color: blue;
-//   }
-//   @debug ($multiplier) + map-get($config, speicificity);
-// }
-
-$replicator: '&#{&}';
-
-@mixin specificity($level) {
-  .selector {
-    #{$replicator} {
-      color: blue;
+@function increaseSpecificity($number) {
+  $increment: '';
+  $increaser: #{&};
+  @if ($number == 10) {
+    @return '';
+  } @else {
+    @for $i from 1 through (($number / 10) - 1) {
+      $increment: $increment + $increaser;
     }
+    @return $increment;
   }
 }
 
-@include specificity(1)
+@mixin specificity($level) {
+  &#{increaseSpecificity($level)} {
+    @content;
+  }
+}
+
+.test {
+  @include specificity(10) {
+    color: blue;
+  }
+}
+
