@@ -1,3 +1,13 @@
+# 0.1.0-rc4 (2019-02-15)
+- Keyword spacers are here! 😄
+  - Available sizes are:
+    - `small`: 15px
+    - `medium`: 30px
+    - `large`: 45px
+    - `x-large`: 60px
+  - These can also be used for margin and padding
+  - Syntax: `<div class="u-spacer-large"></div>`
+
 # 0.1.0-rc3 (2019-01-22)
 ### Features
 - Added `fontColor` and `textTransform` mixins (#5) (1450a7b) Closes #1 Closes #4 Closes #2
