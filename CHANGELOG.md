@@ -1,3 +1,16 @@
+# 0.2.0 (2019-04-03)
+### Features
+- Margin and padding for elements has been updated:
+  - Margins and paddings now have three different options so you do not have to add multiple classNames where you could use one
+  - Syntax:
+    - `.u-[margin|padding]-all-[number|keyword]`: Will add margin or padding at the block-start, block-end, inline-start, and inline-end
+    - `.u-[margin|padding]-block-[number|keyword]`: Will add margin or padding at the block-start and block-end of the element
+    - `.u-[margin|padding]-inline-[number|keyword]`: Will add margin or padding at the inline-start and inline-end of the element
+
+### Bug Fixes
+- Removed `includes` from modules and added to main stylesheet. This fixes an issue that was causing dupes if you wanted custom sizing (for things like spacers, margin, etc.) and included the file where needed.
+
+
 # 0.1.0-rc4 (2019-02-15)
 - Keyword spacers are here! 😄
   - Available sizes are:

@@ -28,6 +28,16 @@ $utilTypes: (
             height: #{$size}px;
           }
         }
+        .u-margin-all-#{$keyword} {
+          &#{&} {
+            margin: #{$size}px;
+          }
+        }
+        .u-padding-all-#{$keyword} {
+          &#{&} {
+            padding: #{$size}px;
+          }
+        }
       } @else {
         @each $position in $positions {
           .u-#{$utilType}-#{$position}-#{$keyword} {
@@ -35,12 +45,27 @@ $utilTypes: (
               #{$utilType}-#{$position}: #{$size}px;
             }
           }
+          @if ($position == 'top') {
+            .u-#{$utilType}-block-#{$keyword} {
+              &#{&} {
+                margin-block-start: #{$size}px;
+                margin-block-end: #{$size}px;
+                margin-top: #{$size}px;
+                margin-bottom: #{$size}px;
+              }
+            }
+          } @else if ($position == 'left') {
+            .u-#{$utilType}-inline-#{$keyword} {
+              &#{&} {
+                margin-inline-start: #{$size}px;
+                margin-inline-end: #{$size}px;
+                margin-left: #{$size}px;
+                margin-right: #{$size}px;
+              }
+            }
+          }
         }
       }
     }
   }
-};
-
-
-
-@include keywordSizes();
+}
