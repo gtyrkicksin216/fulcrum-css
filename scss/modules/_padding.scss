@@ -25,9 +25,32 @@
           padding-#{$position}: #{$value}px;
         }
       }
+      @if ($position == 'top') {
+        .u-padding-block-#{$value} {
+          &#{&} {
+            padding-block-start: #{$value}px;
+            padding-block-end: #{$value}px;
+            padding-top: #{$value}px;
+            padding-bottom: #{$value}px;
+          }
+        }
+      } @else if ($position == 'left') {
+        .u-padding-inline-#{$value} {
+          &#{&} {
+            padding-inline-start: #{$value}px;
+            padding-inline-end: #{$value}px;
+            padding-left: #{$value}px;
+            padding-right: #{$value}px;
+          }
+        }
+        .u-padding-all-#{$value} {
+          &#{&} {
+            padding: #{$value}px;
+          }
+        }
+      }
     }
   }
 }
 
 
-@include padding;
