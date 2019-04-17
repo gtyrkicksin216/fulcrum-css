@@ -48,19 +48,19 @@ $utilTypes: (
           @if ($position == 'top') {
             .u-#{$utilType}-block-#{$keyword} {
               &#{&} {
-                margin-block-start: #{$size}px;
-                margin-block-end: #{$size}px;
-                margin-top: #{$size}px;
-                margin-bottom: #{$size}px;
+                #{$utilType}-block-start: #{$size}px;
+                #{$utilType}-block-end: #{$size}px;
+                #{$utilType}-top: #{$size}px;
+                #{$utilType}-bottom: #{$size}px;
               }
             }
           } @else if ($position == 'left') {
             .u-#{$utilType}-inline-#{$keyword} {
               &#{&} {
-                margin-inline-start: #{$size}px;
-                margin-inline-end: #{$size}px;
-                margin-left: #{$size}px;
-                margin-right: #{$size}px;
+                #{$utilType}-inline-start: #{$size}px;
+                #{$utilType}-inline-end: #{$size}px;
+                #{$utilType}-left: #{$size}px;
+                #{$utilType}-right: #{$size}px;
               }
             }
           }
