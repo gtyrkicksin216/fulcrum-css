@@ -1,3 +1,7 @@
+# 0.2.1 (2019-04-17)
+### Bug Fixes
+Fixed an issue where using `padding-[block|inline]` with keywords was using margin instead of padding (#6008e66 closing #13)
+
 # 0.2.0 (2019-04-03)
 ### Features
 - Margin and padding for elements has been updated:
