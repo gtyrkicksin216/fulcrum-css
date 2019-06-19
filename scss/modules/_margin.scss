@@ -28,8 +28,7 @@
       @if ($position == 'top') {
         .u-margin-block-#{$value} {
           &#{&} {
-            margin-block-start: #{$value}px;
-            margin-block-end: #{$value}px;
+            margin-block: #{$value}px;
             margin-top: #{$value}px;
             margin-bottom: #{$value}px;
           }
@@ -37,8 +36,7 @@
       } @else if ($position == 'left') {
         .u-margin-inline-#{$value} {
           &#{&} {
-            margin-inline-start: #{$value}px;
-            margin-inline-end: #{$value}px;
+            margin-inline: #{$value}px;
             margin-left: #{$value}px;
             margin-right: #{$value}px;
           }
