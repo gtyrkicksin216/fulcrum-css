@@ -1,6 +1,6 @@
 {
   "name": "fulcrum-css",
-  "version": "0.3.0-beta0",
+  "version": "0.3.0",
   "description": "A CSS utility set used to easily style UI components by adding some simple markup",
   "main": "fulcrum.min.css",
   "scripts": {
