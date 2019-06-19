@@ -8,3 +8,8 @@ npm-shrinkwrap.json
 
 # editor settings
 .editorconfig
+
+# images used with docs
+*/*.jpg
+
+# any html files used for testing

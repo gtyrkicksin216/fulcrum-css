@@ -1,3 +1,23 @@
+# 0.3.0 (2019-04-19)
+### Features
+- Added flex grid
+  - Extremely useful for forms or layouts that require more rigidity
+  - **IMPORTANT NOTE:** Flex grid only has a specificity of 10, unlike the rest of Fulcrum which has a specificity of 20. This is by design as the flex-grid is meant to be a light layout utility, while still being able to take other Fulcrum classes for overrides.
+  - Syntax:
+    - `.u-flex-grid`: The wrapper for rows and elements
+    - `.u-flex-row`: A row element. Wrapper for columns
+    - `.u-flex-column`
+  - Example:
+      ```html
+      <div class="u-flex-grid">
+        <div class="u-flex-row">
+          <div class="u-flex-column></div>
+        </div>
+      </div>
+      ```
+  - Reference:
+     ![](./flex-grid.png)
+
 # 0.2.1 (2019-04-17)
 ### Bug Fixes
 Fixed an issue where using `padding-[block|inline]` with keywords was using margin instead of padding (#6008e66 closing #13)
