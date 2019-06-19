@@ -48,8 +48,7 @@ $utilTypes: (
           @if ($position == 'top') {
             .u-#{$utilType}-block-#{$keyword} {
               &#{&} {
-                #{$utilType}-block-start: #{$size}px;
-                #{$utilType}-block-end: #{$size}px;
+                #{$utilType}-block: #{$size}px;
                 #{$utilType}-top: #{$size}px;
                 #{$utilType}-bottom: #{$size}px;
               }
@@ -57,8 +56,7 @@ $utilTypes: (
           } @else if ($position == 'left') {
             .u-#{$utilType}-inline-#{$keyword} {
               &#{&} {
-                #{$utilType}-inline-start: #{$size}px;
-                #{$utilType}-inline-end: #{$size}px;
+                #{$utilType}-inline: #{$size}px;
                 #{$utilType}-left: #{$size}px;
                 #{$utilType}-right: #{$size}px;
               }
