@@ -3,6 +3,7 @@
   * This will create a `margin: 0 !important;` rule as well
   * as a `margin-[top|right|bottom|left]: 0;`
 */
+
 @mixin margins($start: 0, $end: 10, $multiplier: 5) {
   $positions: (
     top,
@@ -50,5 +51,3 @@
     }
   }
 }
-
-

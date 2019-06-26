@@ -1,4 +1,5 @@
 // Box shadow calculation values 1-10
+
 @mixin elevation($blur: null, $spread: 0, $color: #c8cdd0) {
   @for $i from 1 through 10 {
     $xOffset: $i;
@@ -11,6 +12,5 @@
     }
   }
 }
-
 
 @include elevation;

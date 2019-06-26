@@ -1,8 +1,9 @@
 // For floating elements
+
 @mixin floatElement {
   $elementFloat: (
-  right,
-  left,
+    right,
+    left,
   );
   @each $alignment in $elementFloat {
     .u-#{$alignment} {
