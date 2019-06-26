@@ -1,5 +1,6 @@
 /* prettier-ignore */
-@import 
+
+@import
   './modules/breakpoints',
   './modules/flex-grid',
   './modules/browser-compat',
@@ -12,7 +13,6 @@
   './modules/spacers',//
   './modules/text-alignment',//
   './modules/full-width',//
-  // './modules/heading-size',//
   './modules/align-self',//
   './modules/flex-align-items',//
   './modules/font-size',//
@@ -27,7 +27,6 @@
 @include spacers;
 @include textAlignment;
 @include fullWidth;
-@include headingSize;
 @include alignSelf;
 @include flexAlignItems;
 @include fontSizes;

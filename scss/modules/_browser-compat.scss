@@ -1,6 +1,7 @@
 /*
   * For IE 10 & 11
 */
+
 @mixin ie10plus {
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @content;

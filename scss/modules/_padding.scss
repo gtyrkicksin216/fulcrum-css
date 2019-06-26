@@ -3,6 +3,7 @@
   * This will create paddings 5-50 as
   * `padding-[top|right|bottom|left]: #;`
 */
+
 @mixin padding($start: 0, $end: 10, $multiplier: 5) {
   $positions: (
     top,
@@ -50,5 +51,3 @@
     }
   }
 }
-
-

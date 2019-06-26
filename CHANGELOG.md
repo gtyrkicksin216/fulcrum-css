@@ -1,3 +1,24 @@
+#0.3.1 (2019-06-26)
+## Contributing
+Stylelint has been added. Prior to contributing make sure you now run `npm run lint:fix`. This will automatically fix any linting errors. If there are still errors after this you will need to fix them on your own. The following files listed in the output below can be ignored:
+
+```cmd
+scss/modules/_keyword-sizes.scss
+ 36:15  ‼  Expected nesting depth to be no more than 5   max-nesting-depth
+ 44:15  ‼  Expected nesting depth to be no more than 5   max-nesting-depth
+
+scss/modules/_margin.scss
+ 12:20  ×  Unexpected !important   declaration-no-important
+
+scss/modules/_padding.scss
+ 12:21  ×  Unexpected !important   declaration-no-important
+```
+
+### Bug Fixes
+- Fixing an issue with the flex grid hiding Material input labels when the input was focused (#22 closing #24)
+
+- Fixed an issue where text was being overridden by the heading-size module. This module was removed as it is not within the scope of this library (#26 closing #25)
+
 # 0.3.0 (2019-04-19)
 ### Features
 - Added flex grid

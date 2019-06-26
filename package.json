@@ -6,6 +6,7 @@
   "scripts": {
     "test": "test",
     "dev:watch": "node-sass -w -r scss/fulcrum.scss scss/dev.compiled.css",
+    "lint:fix": "stylelint **/*.scss --fix",
     "prod:build": "rm -rf dist/ *.tgz scss/dev.compiled.css && node-sass scss/fulcrum.scss dist/fulcrum.min.css --output-style compressed && npm pack"
   },
   "keywords": [
@@ -20,6 +21,7 @@
   "author": "Ryan Wood",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "stylelint": "^10.1.0"
   }
 }

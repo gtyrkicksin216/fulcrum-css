@@ -3,6 +3,7 @@
  * Custom classes can be used by using the syntax:
  * @include spacers($other: #); ***:`#` is a custom number:***
 */
+
 @mixin spacers($start: 1, $end: 10, $multiplier: 5, $other: null) {
   @if ($other == null or $other == '') {
     @for $i from $start through $end {
@@ -23,4 +24,3 @@
     }
   }
 }
-
