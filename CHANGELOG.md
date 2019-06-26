@@ -1,17 +1,18 @@
 # 0.3.0 (2019-04-19)
 ### Features
 - Added flex grid
-  - Extremely useful for forms or layouts that require more rigidity
-  - **IMPORTANT NOTE:** Flex grid only has a specificity of 10, unlike the rest of Fulcrum which has a specificity of 20. This is by design as the flex-grid is meant to be a light layout utility, while still being able to take other Fulcrum classes for overrides.
+  - Extremely useful for forms or layouts that require more rigidity while still being responsive.
+  - **IMPORTANT NOTE:** Flex grid only has a specificity of 10, unlike the rest of Fulcrum which has a specificity of 20. This is by design as the flex-grid is meant to be a light layout utility, while still being able to take other Fulcrum classes for overrides. Flex column on the other hand has a specificity of 20.
   - Syntax:
     - `.u-flex-grid`: The wrapper for rows and elements
     - `.u-flex-row`: A row element. Wrapper for columns
-    - `.u-flex-column`
+    - `.u-flex-column`: A column element.
+      - `.m--<size[small|medium|large]>-<width[1-12]>`: The amount of space the column will take up out of the 12 column grid
   - Example:
       ```html
       <div class="u-flex-grid">
         <div class="u-flex-row">
-          <div class="u-flex-column></div>
+          <div class="u-flex-column m--small-1"></div>
         </div>
       </div>
       ```
