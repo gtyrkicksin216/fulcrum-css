@@ -47,7 +47,7 @@ $sizes: (
       justify-content: flex-start;
       align-items: flex-start;
       width: 100%;
-      overflow-x: hidden;
+      overflow-x: visible;
     }
     &-row {
       display: flex;
