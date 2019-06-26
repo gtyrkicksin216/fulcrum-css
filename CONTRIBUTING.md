@@ -1,6 +1,7 @@
 # If you would like to contribute to FulcrumCSS please see the rules for contributing below
 
-## Branch naming
+## Branching
+When starting a new task, always branch off of the latest version of the **develop** branch!
 
 ### Branch Prefixes
 In an effort to keep the repo clean and easily navigable the following branch prefixes will be accepted. All other branch names will be removed.
