@@ -35,6 +35,11 @@ Be descriptive and add any supporting materials needed with the issue.
 
 ---
 
+## Be sure to commit clean and well formatted code
+Run `npm run lint:fix` to check your code for best practice/formatting errors. If it is unable to completely lint-fix your code you will need to fix any outstanding errors.
+
+---
+
 ## Submitting PRs
 Once you have completed any work that you would like to be added to the next release of FulcrumCSS, you can submit a PR for that feature/bug/maint, to the develop branch. Be sure to reference the issue that you are addressing in your PR.
 
