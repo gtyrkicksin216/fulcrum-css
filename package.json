@@ -1,13 +1,13 @@
 {
   "name": "fulcrum-css",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A CSS utility set used to easily style UI components by adding some simple markup",
   "main": "fulcrum.min.css",
   "scripts": {
     "test": "test",
     "dev:watch": "node-sass -w -r scss/fulcrum.scss scss/dev.compiled.css",
     "lint:fix": "stylelint **/*.scss --fix",
-    "prod:build": "rm -rf dist/ *.tgz scss/dev.compiled.css && node-sass scss/fulcrum.scss dist/fulcrum.min.css --output-style compressed && npm pack"
+    "prod:build": "npm run lint:fix &&  rm -rf dist/ *.tgz scss/dev.compiled.css && node-sass scss/fulcrum.scss dist/fulcrum.min.css --output-style compressed && npm pack"
   },
   "keywords": [
     "CSS",

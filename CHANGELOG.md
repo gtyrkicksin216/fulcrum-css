@@ -1,5 +1,11 @@
+# 0.3.2 (2019-07-01)
+### Bug Fixes
+- Re-ordered sizes in flex-grid map to ensure that they cascade properly
+
+- Added breakpoints to flex-grid
+
 # 0.3.1 (2019-06-26)
-## Contributing
+### Contributing
 Stylelint has been added. Prior to contributing make sure you now run `npm run lint:fix`. This will automatically fix any linting errors. If there are still errors after this you will need to fix them on your own.
 
 ### Bug Fixes
