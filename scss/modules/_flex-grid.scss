@@ -1,9 +1,11 @@
+@import './breakpoints';
+
 $columns: 12;
 $space-between: 15px;
-$sizes: (
-  small,
-  medium,
-  large,
+$SIZES: (
+  large: 992,
+  medium: 768,
+  small: 576,
 );
 
 @function stripUnit($value) {
@@ -21,14 +23,23 @@ $sizes: (
       flex-basis: $flexBasis;
       max-width: $flexBasis;
       min-width: $flexBasis;
+      @if ($column == 12) {
+        margin: 0;
+      }
     }
   }
 }
 
 @mixin createSizeClasses {
-  @each $size in $sizes {
+  @each $size, $value in $SIZES {
     &--#{$size} {
-      @include createColumns;
+      @if ($size != 'large') {
+        @media screen and (max-width: #{$value}px) {
+          @include createColumns;
+        }
+      } @else {
+        @include createColumns;
+      }
     }
   }
 }
