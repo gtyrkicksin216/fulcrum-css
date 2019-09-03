@@ -1,3 +1,13 @@
+# 0.4.0 (2019-09-03)
+
+### Features
+- Added new grid layout module has been added to allow for cleaner grid class names
+- **The flex-grid module has been deprecated and will be removed on 2019-12-01**
+- Added a deprecation notifier to alert when features have been deprecated and will be removed from the library
+
+### Contributing
+Husky has been added to lint styles prior to allowing commits. Stylelint is also run before build & release. If a stylelint is bypassed and a PR has linting errors it will be rejected and removed
+
 # 0.3.2 (2019-07-01)
 ### Bug Fixes
 - Re-ordered sizes in flex-grid map to ensure that they cascade properly
