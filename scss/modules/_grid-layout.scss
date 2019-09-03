@@ -1,0 +1,73 @@
+$COLUMNS: 12;
+// * column-padding should be half the desired gutter width & only adds left and right padding to the columns
+$COLUMN-PADDING: 15px;
+
+$BREAKPOINTS: (
+  mobile: null,
+  tablet: 775px,
+  desktop: 993px,
+);
+
+@mixin responsive {
+  &-auto-width {
+    flex: 0 0 auto;
+    @content;
+  }
+  @for $i from 1 through $COLUMNS {
+    $percentage: (($i / $COLUMNS) * 100) * 1%;
+    &-#{$i} {
+      flex: 0 0 auto;
+      width: #{$percentage};
+    }
+    &-offset-#{$i} {
+      margin-left: #{$percentage};
+    }
+  }
+}
+
+.u-row {
+  display: flex;
+  box-sizing: border-box;
+  margin-left: -$COLUMN-PADDING;
+  margin-right: -$COLUMN-PADDING;
+  &__column {
+    display: block;
+    flex: 1 1 0;
+    padding: 0 $COLUMN-PADDING;
+    box-sizing: border-box; // ! NOTE: All should be border box
+    &.m {
+      @each $key, $value in $BREAKPOINTS {
+        &--#{$key} {
+          @if ($key == mobile) {
+            @include responsive {
+              width: auto;
+            }
+          } @else {
+            @media screen and (min-width: $value), print {
+              @include responsive;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 774px), print {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+  &.m {
+    &--no-gutters {
+      margin-left: 0;
+      margin-right: 0;
+      > .u-row__column {
+        padding: 0;
+      }
+    }
+    &--wrap {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 774px), print {
+    flex-wrap: wrap;
+  }
+}
