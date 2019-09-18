@@ -1,22 +1,28 @@
 // For item alignment with a flex container
 
 @mixin flexAlignItems {
+  $alignmentTypes: (
+    align,
+    justify,
+  );
+  $alignmentTargets: (
+    items,
+    content,
+  );
   $elementAlignment: (
     start,
     end,
     center,
   );
-  @each $alignment in $elementAlignment {
-    @if $alignment == start or $alignment == end {
-      .u-align-items-#{$alignment} {
-        &#{&} {
-          align-items: flex-#{$alignment};
-        }
-      }
-    } @else {
-      .u-align-items-#{$alignment} {
-        &#{&} {
-          align-items: $alignment;
+  @each $alignmentType in $alignmentTypes {
+    @each $alignmentTarget in $alignmentTargets {
+      .u-#{$alignmentType}-#{$alignmentTarget} {
+        @each $alignment in $elementAlignment {
+          &-#{$alignment} {
+            &#{&} {
+              #{$alignmentType}-#{$alignmentTarget}: #{if(($alignment == start or $alignment == end), flex-#{$alignment}, $alignment)};
+            }
+          }
         }
       }
     }
