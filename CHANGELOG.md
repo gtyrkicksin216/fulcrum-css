@@ -1,4 +1,4 @@
-# 0.4.0 (2019-09-03)
+# 0.5.0 (2019-10-08)
 
 ### Features
 - The flex-align mixin has been updated to include justification and alignment. It also ensures that the item it is applied to is automatically set to display: flex (which is requried for this to work)
