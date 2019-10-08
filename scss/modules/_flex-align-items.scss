@@ -20,6 +20,7 @@
         @each $alignment in $elementAlignment {
           &-#{$alignment} {
             &#{&} {
+              display: flex;
               #{$alignmentType}-#{$alignmentTarget}: #{if(($alignment == start or $alignment == end), flex-#{$alignment}, $alignment)};
             }
           }
