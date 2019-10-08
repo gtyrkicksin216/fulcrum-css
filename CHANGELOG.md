@@ -1,6 +1,13 @@
 # 0.4.0 (2019-09-03)
 
 ### Features
+- The flex-align mixin has been updated to include justification and alignment. It also ensures that the item it is applied to is automatically set to display: flex (which is requried for this to work)
+  - Syntax: `u-<align-type[align|justify]>-<alignment-target[content|items]>-<alignment-position[start|center|end]>`
+  - Example: `u-align-items-center` --or-- `u-justify-content-end`
+
+# 0.4.0 (2019-09-03)
+
+### Features
 - Added new grid layout module has been added to allow for cleaner grid class names
 - **The flex-grid module has been deprecated and will be removed on 2019-12-01**
 - Added a deprecation notifier to alert when features have been deprecated and will be removed from the library
