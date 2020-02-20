@@ -1,12 +1,9 @@
-$COLUMNS: 12;
-// * column-padding should be half the desired gutter width & only adds left and right padding to the columns
-$COLUMN-PADDING: 15px;
+@use 'sass:map';
+@use '../config/config' as CONFIG;
 
-$BREAKPOINTS: (
-  mobile: null,
-  tablet: 775px,
-  desktop: 993px,
-);
+$COLUMNS: CONFIG.$COLUMNS;
+// * column-padding should be half the desired gutter width & only adds left and right padding to the columns
+$COLUMN-PADDING: CONFIG.$GRID_GUTTERS;
 
 @mixin responsive {
   &-auto-width {
@@ -36,9 +33,9 @@ $BREAKPOINTS: (
     padding: 0 $COLUMN-PADDING;
     box-sizing: border-box; // ! NOTE: All should be border box
     &.m {
-      @each $key, $value in $BREAKPOINTS {
+      @each $key, $value in CONFIG.$BREAKPOINTS {
         &--#{$key} {
-          @if ($key == mobile) {
+          @if ($key == 'mobile') {
             @include responsive {
               width: auto;
             }

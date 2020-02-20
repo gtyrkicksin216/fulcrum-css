@@ -1,0 +1,40 @@
+@use 'sass:map';
+@use '../config/config' as CONFIG;
+
+$_BASE_SIZE: map.get(map.get(CONFIG.$ALL_SIZES, 'sizes'), 'baseSize');
+$_INCREMENT_BY: map.get(map.get(CONFIG.$ALL_SIZES, 'sizes'), 'incrementBy');
+$_AMOUNT: map.get(map.get(CONFIG.$ALL_SIZES, 'sizes'), 'amount');
+
+$_FONT_BASE_SIZE: map.get(map.get(CONFIG.$ALL_SIZES, 'fonts'), 'baseSize');
+$_FONT_INCREMENT_BY: map.get(map.get(CONFIG.$ALL_SIZES, 'fonts'), 'incrementBy');
+$_FONT_AMOUNT: map.get(map.get(CONFIG.$ALL_SIZES, 'fonts'), 'amount');
+
+$_size: $_BASE_SIZE - $_INCREMENT_BY;
+
+@mixin generateSizing ($_type) {
+  @for $i from 1 through $_AMOUNT {
+    $_size: $_size + $_INCREMENT_BY;
+    @debug $_size;
+    .u-#{$_type}-#{$_size} {
+      $_finalSize: #{$_size / if(CONFIG.$UNIT == 'rem', CONFIG.$ROOT_FONT_SIZE, 1)}#{CONFIG.$UNIT};
+      @if ($_type == 'spacer') {
+        margin-bottom: $_finalSize;
+        clear: both;
+        width: 100%;
+      } @else {
+        #{$_type}: $_finalSize;
+      }
+    }
+  }
+}
+
+@each $key in map.get(CONFIG.$ALL_SIZES, 'modules') {
+  @debug $key;
+  @include generateSizing('#{$key}');
+}
+
+// @mixin _generateFromLogicalProperties ($_type: null) {
+//   @each $key in CONFIG.$PROPERTY {
+
+//   }
+// }

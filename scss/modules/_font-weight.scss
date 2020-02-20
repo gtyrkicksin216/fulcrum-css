@@ -5,12 +5,12 @@
 
 @mixin fontWeight {
   $weights: (
-    extra-light: 200,
-    light: 300,
-    regular: 400,
-    semi-bold: 600,
-    bold: 700,
-    black: 900,
+    'extra-light': 200,
+    'light': 300,
+    'regular': 400,
+    'semi-bold': 600,
+    'bold': 700,
+    'black': 900,
   );
   @each $value, $weight in $weights {
     .u-font-#{$value} {

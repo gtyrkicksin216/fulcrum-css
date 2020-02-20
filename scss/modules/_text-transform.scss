@@ -1,10 +1,10 @@
 @mixin textTransform {
   $transforms: (
-    none,
-    capitalize,
-    uppercase,
-    lowercase,
-    full-width,
+    'none',
+    'capitalize',
+    'uppercase',
+    'lowercase',
+    'full-width',
   );
   @each $transform in $transforms {
     .u-text-transform-#{$transform} {

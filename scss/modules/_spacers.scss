@@ -4,7 +4,15 @@
  * @include spacers($other: #); ***:`#` is a custom number:***
 */
 
-@mixin spacers($start: 1, $end: 10, $multiplier: 5, $other: null) {
+@use 'sass:map';
+@use '../config/config' as CONFIG;
+
+@mixin spacers(
+  $start: map.get(CONFIG.$SPACERS, 'start'),
+  $end: map.get(CONFIG.$SPACERS, 'end'),
+  $multiplier: map.get(CONFIG.$SPACERS, 'multiplier'),
+  $other: null,
+) {
   @if ($other == null or $other == '') {
     @for $i from $start through $end {
       $value: $i * $multiplier;

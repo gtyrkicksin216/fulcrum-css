@@ -4,8 +4,15 @@
   * `padding-[top|right|bottom|left]: #;`
 */
 
-@mixin padding($start: 0, $end: 10, $multiplier: 5) {
-  $positions: (
+@use 'sass:map';
+@use '../config/config' as CONFIG;
+
+@mixin padding(
+  $start: map.get(CONFIG.$PADDING, 'start'),
+  $end: map.get(CONFIG.$PADDING, 'end'),
+  $multiplier: map.get(CONFIG.$PADDING, 'multiplier'),
+) {
+  $_positions: (
     top,
     bottom,
     left,
@@ -19,7 +26,7 @@
       }
     }
   }
-  @each $position in $positions {
+  @each $position in $_positions {
     @for $i from $start through $end {
       $value: $i * $multiplier;
       .u-padding-#{$position}-#{$value} {

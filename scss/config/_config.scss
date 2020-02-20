@@ -1,0 +1,78 @@
+// grid layout  
+$COLUMNS: 12 !default;
+$GRID_GUTTERS: 15px !default;
+$BREAKPOINTS: (
+  'mobile': null,
+  'tablet': 775px,
+  'desktop': 993px,
+) !default;
+
+// Total package
+$UNIT: 'rem' !default;
+
+$ROOT_FONT_SIZE: 10;
+
+$SIZES: (
+  'baseSize': 15,
+  'incrementBy': 5,
+  'amount': 10,
+) !default;
+
+$PROPERTY: (
+  'block',
+  'inline',
+) !default;
+
+$FONTS: (
+  'baseSize': 8,
+  'incrementBy': 2,
+  'amount': 15,
+) !default;
+
+$MODULES: (
+  'padding',
+  'margin',
+  'spacer',
+  'font-size',
+) !default;
+
+$ALL_SIZES: (
+  'sizes': $SIZES,
+  'modules': $MODULES,
+  'fonts': $FONTS,
+) !default;
+
+// SIZING AND RHYTHM
+$SIZING: (
+  'small': 15,
+  'medium': 30,
+  'large': 45,
+  'x-large': 60,
+) !default;
+
+// Margins
+$MARGINS: (
+  'start': 0,
+  'end': 10,
+  'multiplier': 5,
+) !default;
+
+// Padding
+$PADDING: (
+  'start': 0,
+  'end': 10,
+  'multiplier': 5,
+) !default;
+
+// Padding
+$SPACERS: (
+  'start': 1,
+  'end': 10,
+  'multiplier': 5,
+) !default;
+
+// font-size
+$FONT_SIZE: (
+  'start': 8,
+  'end': 22,
+) !default;

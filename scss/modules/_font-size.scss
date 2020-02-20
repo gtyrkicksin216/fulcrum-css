@@ -3,7 +3,13 @@
   * as such
 */
 
-@mixin fontSizes($start: 8, $end: 22) {
+@use 'sass:map';
+@use '../config/config' as CONFIG;
+
+@mixin fontSizes(
+  $start: map.get(CONFIG.$FONT_SIZE, 'start'),
+  $end: map.get(CONFIG.$FONT_SIZE, 'end'),
+) {
   @for $i from $start through $end {
     @if ($i % 2 == 0) {
       .u-font-size-#{$i} {

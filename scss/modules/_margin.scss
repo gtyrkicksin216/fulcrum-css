@@ -4,12 +4,19 @@
   * as a `margin-[top|right|bottom|left]: 0;`
 */
 
-@mixin margins($start: 0, $end: 10, $multiplier: 5) {
-  $positions: (
-    top,
-    bottom,
-    left,
-    right,
+@use 'sass:map';
+@use '../config/config' as CONFIG;
+
+@mixin margins(
+  $start: map.get(CONFIG.$MARGINS, 'start'),
+  $end: map.get(CONFIG.$MARGINS, 'end'),
+  $multiplier: map.get(CONFIG.$MARGINS, 'multiplier'),
+) {
+  $_positions: (
+    'top',
+    'bottom',
+    'left',
+    'right',
   );
   @if ($start == 0) {
     .u-margin-0 {
@@ -19,7 +26,7 @@
       }
     }
   }
-  @each $position in $positions {
+  @each $position in $_positions {
     @for $i from $start through $end {
       $value: $i * $multiplier;
       .u-margin-#{$position}-#{$value} {

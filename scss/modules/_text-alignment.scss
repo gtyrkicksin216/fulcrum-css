@@ -2,9 +2,9 @@
 
 @mixin textAlignment {
   $textAlign: (
-    right,
-    left,
-    center,
+    'right',
+    'left',
+    'center',
   );
   @each $alignment in $textAlign {
     .u-text-#{$alignment} {

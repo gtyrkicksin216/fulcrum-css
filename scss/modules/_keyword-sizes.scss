@@ -1,28 +1,23 @@
 // stylelint-disable
+@use 'sass:map';
+@use '../config/config' as CONFIG;
 
-$keywords: (
-  small: 15,
-  medium: 30,
-  large: 45,
-  x-large: 60,
+$_positions: (
+  'top',
+  'bottom',
+  'right',
+  'left',
 );
 
-$positions: (
-  top,
-  bottom,
-  right,
-  left,
-);
-
-$utilTypes: (
-  padding,
-  margin,
-  spacer,
+$_utilTypes: (
+  'padding',
+  'margin',
+  'spacer',
 );
 
 @mixin keywordSizes {
-  @each $utilType in $utilTypes {
-    @each $keyword, $size in $keywords {
+  @each $utilType in $_utilTypes {
+    @each $keyword, $size in CONFIG.$SIZING {
       @if ($utilType == 'spacer') {
         .u-spacer-#{$keyword} {
           &#{&} {
@@ -41,7 +36,7 @@ $utilTypes: (
           }
         }
       } @else {
-        @each $position in $positions {
+        @each $position in $_positions {
           .u-#{$utilType}-#{$position}-#{$keyword} {
             &#{&} {
               #{$utilType}-#{$position}: #{$size}px;

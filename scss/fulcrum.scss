@@ -1,35 +1,33 @@
 /* prettier-ignore */
 
-@import
-  './modules/breakpoints',
-  './modules/flex-grid',
-  './modules/grid-layout',
-  './modules/browser-compat',
-  './modules/element-floats',//
-  './modules/elevation',//
-  './modules/font-weight',//
-  './modules/margin',//
-  './modules/padding',//
-  './modules/rem-calcuation',
-  './modules/spacers',//
-  './modules/text-alignment',//
-  './modules/full-width',//
-  './modules/align-self',//
-  './modules/flex-align-items',//
-  './modules/font-size',//
-  './modules/text-transform',//
-  './modules/keyword-sizes';//
+@forward './config/config';
 
-@include floatElement;
-@include elevation;
-@include fontWeight;
-@include margins;
-@include padding;
-@include spacers;
-@include textAlignment;
-@include fullWidth;
-@include alignSelf;
-@include flexAlignItems;
-@include fontSizes;
-@include textTransform;
-@include keywordSizes;
+@use './modules/breakpoints' as bp;
+@use './modules/grid-layout' as layoutGrid;
+@use './modules/element-floats' as floats;
+@use './modules/elevation' as elevation;
+@use './modules/font-weight' as font;
+@use './modules/margin' as margin;
+@use './modules/padding' as padding;
+@use './modules/spacers' as spacers;
+@use './modules/text-alignment' as textAlignment;
+@use './modules/full-width' as fullWidth;
+@use './modules/align-self' as alignSelf;
+@use './modules/flex-align-items' as flexAlign;
+@use './modules/font-size' as fontSize;
+@use './modules/text-transform' as textTransform;
+@use './modules/keyword-sizes' as keywordSizes;
+
+@include floats.floatElement;
+@include elevation.elevation;
+@include font.fontWeight;
+@include margin.margins;
+@include padding.padding;
+@include spacers.spacers;
+@include textAlignment.textAlignment;
+@include fullWidth.fullWidth;
+@include alignSelf.alignSelf;
+@include flexAlign.flexAlignItems;
+@include fontSize.fontSizes;
+@include textTransform.textTransform;
+@include keywordSizes.keywordSizes;

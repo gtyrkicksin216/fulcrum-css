@@ -2,17 +2,17 @@
 
 @mixin flexAlignItems {
   $alignmentTypes: (
-    align,
-    justify,
+    'align',
+    'justify',
   );
   $alignmentTargets: (
-    items,
-    content,
+    'items',
+    'content',
   );
   $elementAlignment: (
-    start,
-    end,
-    center,
+    'start',
+    'end',
+    'center',
   );
   @each $alignmentType in $alignmentTypes {
     @each $alignmentTarget in $alignmentTargets {
@@ -21,7 +21,7 @@
           &-#{$alignment} {
             &#{&} {
               display: flex;
-              #{$alignmentType}-#{$alignmentTarget}: #{if(($alignment == start or $alignment == end), flex-#{$alignment}, $alignment)};
+              #{$alignmentType}-#{$alignmentTarget}: #{if(($alignment == 'start' or $alignment == 'end'), flex-#{$alignment}, $alignment)};
             }
           }
         }

@@ -1,3 +1,26 @@
+# 1.0.0 (2020-02-18)
+<!-- write release notes -->
+### Breaking Changes
+- FulcrumCSS is now using DartSass to take advantage of the 'new' module import system. This allows FulcrumCSS to either be used as is right out of the box or to be fully configurable to fit your needs.
+- **Flex grid has been removed** in favor of the new implementation. See the documentation on how to use the new and improved grid implemenation.
+
+### Features
+- FulcrumCSS is now using Dart Sass! (is there an echo in here?)
+  - Config file has been added with configurations for:
+    - Grid columns
+    - Grid Gutters
+    - Breakpoints
+    - Sizing (page rhythm)
+    - Margins
+    - Padding
+    - Spacers
+    - Font Size
+  - You can either choose to utilize the compiled FulcrumCSS file as is, or you can utilize the fulcrum.scss file to adjust the configuration of the above modules
+
+
+### Bug fixes
+- Removed unused modules from main level import
+
 # 0.5.0 (2019-10-08)
 
 ### Features
