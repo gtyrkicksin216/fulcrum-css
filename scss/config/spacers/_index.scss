@@ -1,0 +1,11 @@
+@use 'sass:map';
+
+$SPACERS: () !default;
+
+$SPACERS_DEFAULT: (
+  'start': 1,
+  'end': 10,
+  'multiplier': 5,
+);
+
+$SPACERS_INTERNAL: map.merge($SPACERS_DEFAULT, $SPACERS);

@@ -1,0 +1,12 @@
+@use 'sass:map';
+
+$SIZING: () !default;
+
+$SIZING_DEFAULT: (
+  'small': 15,
+  'medium': 30,
+  'large': 45,
+  'x-large': 60,
+);
+
+$SIZING_INTERNAL: map.merge($SIZING_DEFAULT, $SIZING);

@@ -1,9 +1,9 @@
 @use 'sass:map';
-@use '../config/config' as CONFIG;
+@use '../config' as CONFIG;
 
-$COLUMNS: CONFIG.$COLUMNS;
+$COLUMNS: map.get(CONFIG.$GRID_INTERNAL, 'columns');
 // * column-padding should be half the desired gutter width & only adds left and right padding to the columns
-$COLUMN-PADDING: CONFIG.$GRID_GUTTERS;
+$COLUMN-PADDING: map.get(CONFIG.$GRID_INTERNAL, 'gutters');
 
 @mixin responsive {
   &-auto-width {
@@ -33,7 +33,7 @@ $COLUMN-PADDING: CONFIG.$GRID_GUTTERS;
     padding: 0 $COLUMN-PADDING;
     box-sizing: border-box; // ! NOTE: All should be border box
     &.m {
-      @each $key, $value in CONFIG.$BREAKPOINTS {
+      @each $key, $value in CONFIG.$BREAKPOINTS_INTERNAL {
         &--#{$key} {
           @if ($key == 'mobile') {
             @include responsive {

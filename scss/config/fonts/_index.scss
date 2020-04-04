@@ -1,0 +1,12 @@
+@use 'sass:map';
+
+$FONT_SIZE: () !default;
+
+// font-size
+$FONT_SIZE_DEFAULT: (
+  'start': 8,
+  // 'incrementBy': 2,
+  'maxSize': 50,
+);
+
+$FONT_SIZE_INTERNAL: map.merge($FONT_SIZE_DEFAULT, $FONT_SIZE);

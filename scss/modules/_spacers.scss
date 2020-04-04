@@ -5,12 +5,12 @@
 */
 
 @use 'sass:map';
-@use '../config/config' as CONFIG;
+@use '../config' as CONFIG;
 
 @mixin spacers(
-  $start: map.get(CONFIG.$SPACERS, 'start'),
-  $end: map.get(CONFIG.$SPACERS, 'end'),
-  $multiplier: map.get(CONFIG.$SPACERS, 'multiplier'),
+  $start: map.get(CONFIG.$SPACERS_INTERNAL, 'start'),
+  $end: map.get(CONFIG.$SPACERS_INTERNAL, 'end'),
+  $multiplier: map.get(CONFIG.$SPACERS_INTERNAL, 'multiplier'),
   $other: null,
 ) {
   @if ($other == null or $other == '') {

@@ -1,0 +1,11 @@
+@use 'sass:map';
+
+$BREAKPOINTS: () !default;
+
+$BREAKPOINTS_DEFAULT: (
+  'mobile': null,
+  'tablet': 775px,
+  'desktop': 993px,
+);
+
+$BREAKPOINTS_INTERNAL: map.merge($BREAKPOINTS_DEFAULT, $BREAKPOINTS);

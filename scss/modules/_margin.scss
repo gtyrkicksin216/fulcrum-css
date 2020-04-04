@@ -5,12 +5,12 @@
 */
 
 @use 'sass:map';
-@use '../config/config' as CONFIG;
+@use '../config' as CONFIG;
 
 @mixin margins(
-  $start: map.get(CONFIG.$MARGINS, 'start'),
-  $end: map.get(CONFIG.$MARGINS, 'end'),
-  $multiplier: map.get(CONFIG.$MARGINS, 'multiplier'),
+  $start: map.get(CONFIG.$MARGINS_INTERNAL, 'start'),
+  $end: map.get(CONFIG.$MARGINS_INTERNAL, 'end'),
+  $multiplier: map.get(CONFIG.$MARGINS_INTERNAL, 'multiplier'),
 ) {
   $_positions: (
     'top',
@@ -59,3 +59,5 @@
     }
   }
 }
+
+@include margins();

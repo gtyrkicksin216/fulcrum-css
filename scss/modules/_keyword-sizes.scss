@@ -1,6 +1,6 @@
 // stylelint-disable
 @use 'sass:map';
-@use '../config/config' as CONFIG;
+@use '../config' as CONFIG;
 
 $_positions: (
   'top',
@@ -17,7 +17,7 @@ $_utilTypes: (
 
 @mixin keywordSizes {
   @each $utilType in $_utilTypes {
-    @each $keyword, $size in CONFIG.$SIZING {
+    @each $keyword, $size in CONFIG.$SIZING_INTERNAL {
       @if ($utilType == 'spacer') {
         .u-spacer-#{$keyword} {
           &#{&} {
@@ -64,3 +64,5 @@ $_utilTypes: (
     }
   }
 }
+
+@include keywordSizes();

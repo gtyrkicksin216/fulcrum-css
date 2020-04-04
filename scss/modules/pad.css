@@ -1,0 +1,361 @@
+/*
+  * This will create paddings 5-50 as
+  * `padding-[top|right|bottom|left]: #;`
+*/
+.u-padding-0.u-padding-0 {
+  padding: 0 !important;
+}
+
+.u-padding-top-0.u-padding-top-0 {
+  padding-top: 0px;
+}
+
+.u-padding-block-0.u-padding-block-0 {
+  padding-block: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.u-padding-top-5.u-padding-top-5 {
+  padding-top: 5px;
+}
+
+.u-padding-block-5.u-padding-block-5 {
+  padding-block: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.u-padding-top-10.u-padding-top-10 {
+  padding-top: 10px;
+}
+
+.u-padding-block-10.u-padding-block-10 {
+  padding-block: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.u-padding-top-15.u-padding-top-15 {
+  padding-top: 15px;
+}
+
+.u-padding-block-15.u-padding-block-15 {
+  padding-block: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.u-padding-top-20.u-padding-top-20 {
+  padding-top: 20px;
+}
+
+.u-padding-block-20.u-padding-block-20 {
+  padding-block: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.u-padding-top-25.u-padding-top-25 {
+  padding-top: 25px;
+}
+
+.u-padding-block-25.u-padding-block-25 {
+  padding-block: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.u-padding-top-30.u-padding-top-30 {
+  padding-top: 30px;
+}
+
+.u-padding-block-30.u-padding-block-30 {
+  padding-block: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.u-padding-top-35.u-padding-top-35 {
+  padding-top: 35px;
+}
+
+.u-padding-block-35.u-padding-block-35 {
+  padding-block: 35px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.u-padding-top-40.u-padding-top-40 {
+  padding-top: 40px;
+}
+
+.u-padding-block-40.u-padding-block-40 {
+  padding-block: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.u-padding-top-45.u-padding-top-45 {
+  padding-top: 45px;
+}
+
+.u-padding-block-45.u-padding-block-45 {
+  padding-block: 45px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.u-padding-top-50.u-padding-top-50 {
+  padding-top: 50px;
+}
+
+.u-padding-block-50.u-padding-block-50 {
+  padding-block: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.u-padding-bottom-0.u-padding-bottom-0 {
+  padding-bottom: 0px;
+}
+
+.u-padding-bottom-5.u-padding-bottom-5 {
+  padding-bottom: 5px;
+}
+
+.u-padding-bottom-10.u-padding-bottom-10 {
+  padding-bottom: 10px;
+}
+
+.u-padding-bottom-15.u-padding-bottom-15 {
+  padding-bottom: 15px;
+}
+
+.u-padding-bottom-20.u-padding-bottom-20 {
+  padding-bottom: 20px;
+}
+
+.u-padding-bottom-25.u-padding-bottom-25 {
+  padding-bottom: 25px;
+}
+
+.u-padding-bottom-30.u-padding-bottom-30 {
+  padding-bottom: 30px;
+}
+
+.u-padding-bottom-35.u-padding-bottom-35 {
+  padding-bottom: 35px;
+}
+
+.u-padding-bottom-40.u-padding-bottom-40 {
+  padding-bottom: 40px;
+}
+
+.u-padding-bottom-45.u-padding-bottom-45 {
+  padding-bottom: 45px;
+}
+
+.u-padding-bottom-50.u-padding-bottom-50 {
+  padding-bottom: 50px;
+}
+
+.u-padding-left-0.u-padding-left-0 {
+  padding-left: 0px;
+}
+
+.u-padding-inline-0.u-padding-inline-0 {
+  padding-inline: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.u-padding-all-0.u-padding-all-0 {
+  padding: 0px;
+}
+
+.u-padding-left-5.u-padding-left-5 {
+  padding-left: 5px;
+}
+
+.u-padding-inline-5.u-padding-inline-5 {
+  padding-inline: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.u-padding-all-5.u-padding-all-5 {
+  padding: 5px;
+}
+
+.u-padding-left-10.u-padding-left-10 {
+  padding-left: 10px;
+}
+
+.u-padding-inline-10.u-padding-inline-10 {
+  padding-inline: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.u-padding-all-10.u-padding-all-10 {
+  padding: 10px;
+}
+
+.u-padding-left-15.u-padding-left-15 {
+  padding-left: 15px;
+}
+
+.u-padding-inline-15.u-padding-inline-15 {
+  padding-inline: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.u-padding-all-15.u-padding-all-15 {
+  padding: 15px;
+}
+
+.u-padding-left-20.u-padding-left-20 {
+  padding-left: 20px;
+}
+
+.u-padding-inline-20.u-padding-inline-20 {
+  padding-inline: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.u-padding-all-20.u-padding-all-20 {
+  padding: 20px;
+}
+
+.u-padding-left-25.u-padding-left-25 {
+  padding-left: 25px;
+}
+
+.u-padding-inline-25.u-padding-inline-25 {
+  padding-inline: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.u-padding-all-25.u-padding-all-25 {
+  padding: 25px;
+}
+
+.u-padding-left-30.u-padding-left-30 {
+  padding-left: 30px;
+}
+
+.u-padding-inline-30.u-padding-inline-30 {
+  padding-inline: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.u-padding-all-30.u-padding-all-30 {
+  padding: 30px;
+}
+
+.u-padding-left-35.u-padding-left-35 {
+  padding-left: 35px;
+}
+
+.u-padding-inline-35.u-padding-inline-35 {
+  padding-inline: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.u-padding-all-35.u-padding-all-35 {
+  padding: 35px;
+}
+
+.u-padding-left-40.u-padding-left-40 {
+  padding-left: 40px;
+}
+
+.u-padding-inline-40.u-padding-inline-40 {
+  padding-inline: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.u-padding-all-40.u-padding-all-40 {
+  padding: 40px;
+}
+
+.u-padding-left-45.u-padding-left-45 {
+  padding-left: 45px;
+}
+
+.u-padding-inline-45.u-padding-inline-45 {
+  padding-inline: 45px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.u-padding-all-45.u-padding-all-45 {
+  padding: 45px;
+}
+
+.u-padding-left-50.u-padding-left-50 {
+  padding-left: 50px;
+}
+
+.u-padding-inline-50.u-padding-inline-50 {
+  padding-inline: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.u-padding-all-50.u-padding-all-50 {
+  padding: 50px;
+}
+
+.u-padding-right-0.u-padding-right-0 {
+  padding-right: 0px;
+}
+
+.u-padding-right-5.u-padding-right-5 {
+  padding-right: 5px;
+}
+
+.u-padding-right-10.u-padding-right-10 {
+  padding-right: 10px;
+}
+
+.u-padding-right-15.u-padding-right-15 {
+  padding-right: 15px;
+}
+
+.u-padding-right-20.u-padding-right-20 {
+  padding-right: 20px;
+}
+
+.u-padding-right-25.u-padding-right-25 {
+  padding-right: 25px;
+}
+
+.u-padding-right-30.u-padding-right-30 {
+  padding-right: 30px;
+}
+
+.u-padding-right-35.u-padding-right-35 {
+  padding-right: 35px;
+}
+
+.u-padding-right-40.u-padding-right-40 {
+  padding-right: 40px;
+}
+
+.u-padding-right-45.u-padding-right-45 {
+  padding-right: 45px;
+}
+
+.u-padding-right-50.u-padding-right-50 {
+  padding-right: 50px;
+}
+
+/*# sourceMappingURL=pad.css.map */

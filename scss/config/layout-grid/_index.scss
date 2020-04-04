@@ -1,0 +1,10 @@
+@use 'sass:map';
+
+$GRID: () !default;
+
+$GRID_DEFAULT: (
+  'columns': 12,
+  'gutters': 15px,
+);
+
+$GRID_INTERNAL: map.merge($GRID_DEFAULT, $GRID);
