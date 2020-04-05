@@ -1,14 +1,14 @@
 {
-  "name": "fulcrum-css",
-  "version": "0.5.0",
-  "description": "A CSS utility set used to easily style UI components by adding some simple markup",
+  "name": "@fulcrumui/css-utils",
+  "version": "1.0.0-beta0",
+  "description": "A CSS utility set used to easily adjust shared/common styles on UI components by adding some simple markup",
   "main": "fulcrum.min.css",
   "scripts": {
     "test": "test",
-    "dev:watch": "sass --watch scss/fulcrum.scss scss/dev.compiled.css",
     "lint:fix": "stylelint **/*.scss --fix --color --formatter verbose",
-    "prod:build": "npm run lint:fix &&  rm -rf dist/ *.tgz scss/dev.compiled.css && node-sass scss/fulcrum.scss dist/fulcrum.min.css --output-style compressed && npm pack",
-    "postinstall": "node bin/deprecation-notice.js"
+    "build:dev": "sass scss/fulcrum.scss scss/dev.compiled.css",
+    "build:dev:watch": "sass --watch scss/fulcrum.scss scss/dev.compiled.css",
+    "build:prod": "yarn run lint:fix &&  rm -rf dist/ *.tgz scss/dev.compiled.css && sass scss/fulcrum.scss dist/fulcrum.min.css --style compressed && yarn pack"
   },
   "keywords": [
     "CSS",
@@ -28,7 +28,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:fix"
+      "pre-commit": "yarn run lint:fix"
     }
   },
   "dependencies": {

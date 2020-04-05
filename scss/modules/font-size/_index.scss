@@ -4,7 +4,7 @@
 */
 
 @use 'sass:map';
-@use '../config' as CONFIG;
+@use '../../config' as CONFIG;
 
 @mixin fontSizes(
   $_start: map.get(CONFIG.$FONT_SIZE_INTERNAL, 'start'),

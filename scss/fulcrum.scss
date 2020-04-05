@@ -1,6 +1,6 @@
 /* prettier-ignore */
 
-@forward './config/config';
+@forward './config';
 
 @use './modules/breakpoints' as bp;
 @use './modules/grid-layout' as layoutGrid;

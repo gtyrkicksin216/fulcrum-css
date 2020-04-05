@@ -5,7 +5,7 @@
 */
 
 @use 'sass:map';
-@use '../config' as CONFIG;
+@use '../../config' as CONFIG;
 
 @mixin padding(
   $_start: map.get(CONFIG.$PADDING_INTERNAL, 'start'),

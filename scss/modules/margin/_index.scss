@@ -5,7 +5,7 @@
 */
 
 @use 'sass:map';
-@use '../config' as CONFIG;
+@use '../../config' as CONFIG;
 
 @mixin margins(
   $start: map.get(CONFIG.$MARGINS_INTERNAL, 'start'),

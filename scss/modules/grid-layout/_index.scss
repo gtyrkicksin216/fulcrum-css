@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../config' as CONFIG;
+@use '../../config' as CONFIG;
 
 $COLUMNS: map.get(CONFIG.$GRID_INTERNAL, 'columns');
 // * column-padding should be half the desired gutter width & only adds left and right padding to the columns

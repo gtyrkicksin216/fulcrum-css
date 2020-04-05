@@ -5,7 +5,7 @@
 */
 
 @use 'sass:map';
-@use '../config' as CONFIG;
+@use '../../config' as CONFIG;
 
 @mixin spacers(
   $start: map.get(CONFIG.$SPACERS_INTERNAL, 'start'),
